@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('title')
-    Welcome
+    About me
 @endsection
 
 @section('content')
-    <h1>Welcome page</h1>
+    <h1>About me page</h1>
 @endsection
