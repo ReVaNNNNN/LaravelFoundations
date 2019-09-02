@@ -2,8 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
+
 class PageController extends Controller
 {
+    public function index()
+    {
+        $projects = Project::all();
+    }
+
     public function home()
     {
         return view('welcome');
