@@ -37,6 +37,10 @@ class ProjectController extends Controller
     {
         $project = new Project();
 
+        request()->validate([
+            'title' => 'required'
+        ]);
+
         $project->title = request('title');
         $project->description = request('description');
 
