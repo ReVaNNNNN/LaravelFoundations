@@ -38,10 +38,26 @@ class ProjectController extends Controller
         $project = new Project();
 
         request()->validate([
-            'title' => 'required|min: 5'
+            'title' => 'required|min: 5',
+            'description' => 'required|min: 15'
         ]);
 
         $project->title = request('title');
+        $project->description = request('description');
+
+        $project->save();
+
+        return redirect('/projects');
+    }
+
+    public function update(Project $project)
+    {
+        request()->validate([
+            'title' => 'min: 5',
+            'description' => 'min: 15'
+        ]);
+
+        $project->title =  request('title');
         $project->description = request('description');
 
         $project->save();
