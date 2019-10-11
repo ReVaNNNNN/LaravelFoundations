@@ -38,8 +38,8 @@ class ProjectController extends Controller
         $project = new Project();
 
         request()->validate([
-            'title' => 'required|min: 5',
-            'description' => 'required|min: 15'
+            'title' => 'required|min: 3',
+            'description' => 'required|min: 10'
         ]);
 
         $project->title = request('title');
