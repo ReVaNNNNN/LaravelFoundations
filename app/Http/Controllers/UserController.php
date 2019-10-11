@@ -21,7 +21,7 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        //+ validation
+        //there is a place for validation
         $user = new User();
         $user->name = $request->get('name');
         $user->age = $request->get('age');
