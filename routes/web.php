@@ -11,8 +11,9 @@
 |
 */
 
-use Illuminate\Support\Facades\Route;
-
+/**
+    Project routes
+*/
 Route::get('/', 'ProjectController@home');
 Route::get('/contact', 'ProjectControllerr@contact');
 Route::get('/about', 'ProjectController@about');
